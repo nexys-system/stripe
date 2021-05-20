@@ -3,9 +3,9 @@
 export const key = process.env.STRIPE_PK || "pl";
 export const secret = process.env.STRIPE_SECRET || "my_secret";
 
-const host = "http://localhost:3000";
+const host = process.env.HOST || "http://localhost:3000";
 
 export const url = {
-  success: host + "/checkout/success",
-  cancel: host + "/checkout/cancel",
+  success: host + (process.env.STRIPE_URL_SUCCESS || "/checkout/success"),
+  cancel: host + (process.env.STRIPE_URL_SUCCESS || "/checkout/cancel"),
 };
