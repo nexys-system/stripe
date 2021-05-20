@@ -15,7 +15,9 @@
     "type": "git",
     "url": "https://github.com/Nexysweb/boilerplate-node-package"
   },
-  "keywords": [],
+  "keywords": [
+    "stripe"
+  ],
   "devDependencies": {
     "@types/jest": "^25.2.3",
     "jest": "^26.0.1",

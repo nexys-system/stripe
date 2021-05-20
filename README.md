@@ -1,4 +1,4 @@
-# Boilerplate for Node Packages in typescript
+# Stripe helper
 
 [![npm version](https://badge.fury.io/js/@nexys%2Fstripe.svg)](https://www.npmjs.com/package/@nexys%2Fstripe)
 [![npm version](https://img.shields.io/npm/v/@nexys%2Fstripe.svg)](https://www.npmjs.com/package/@nexys%2Fstripe)
