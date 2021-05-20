@@ -11,17 +11,9 @@ This is a minimalist boilerplate template for Node NPM packages written in Types
 
 ## Get started
 
-### Install
-
-`yarn`
-
-### Build
-
-`yarn build`
-
-### Test
-
-`yarn test`
+- install `yarn`
+- build `yarn build`
+- test `yarn test`
 
 ### CI
 
