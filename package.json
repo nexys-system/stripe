@@ -7,19 +7,23 @@
   ],
   "author": "Nexys Sarl",
   "license": "MIT",
-  "scripts":{
-    "build":"tsc",
+  "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Nexysweb/boilerplate-node-package"
   },
-  "keywords":[],
+  "keywords": [],
   "devDependencies": {
     "@types/jest": "^25.2.3",
     "jest": "^26.0.1",
     "ts-jest": "^25.3.1",
     "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.5.10",
+    "node-fetch": "^2.6.1"
   }
 }

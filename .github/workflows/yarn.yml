@@ -11,5 +11,5 @@ jobs:
         with:
           node-version: 14
       - run: yarn
-      - run: yarn test
+      - run: STRIPE_SECRET=${{ secrets.STRIPE_SECRET }} yarn test
       - run: yarn build
