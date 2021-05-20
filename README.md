@@ -7,29 +7,8 @@
 [![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 [![Bundlephobia](https://badgen.net/bundlephobia/min/@nexys%2Fstripe)](https://bundlephobia.com/result?p=@nexys%2Fstripe)
 
-This is a minimalist boilerplate template for Node NPM packages written in Typescript
-
 ## Get started
 
 - install `yarn`
 - build `yarn build`
 - test `yarn test`
-
-### CI
-
-Continuous integration is included and works with github actions.
-
-### Adjust Configuration
-
-Make sure you change the path of the badge (both links and images to link to your package/repo). In `package.json` make sure you point to your github repo
-
-## Publish
-
-In order to publish your package, add the secret variable `NPM_AUTH_TOKEN` to the list of secret variables and release a new version
-
-### Release a new version
-
-```
-npm version {patch,minor,major}
-git push origin master --tags
-```
