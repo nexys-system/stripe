@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate_node_package",
+  "name": "@nexys/stripe",
   "version": "0.0.1",
   "main": "dist/index.js",
   "files": [
