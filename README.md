@@ -7,6 +7,8 @@
 [![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 [![Bundlephobia](https://badgen.net/bundlephobia/min/@nexys%2Fstripe)](https://bundlephobia.com/result?p=@nexys%2Fstripe)
 
+Client code: https://gist.github.com/johnb8005/3b1aec1546afad3185854b22b55586d4
+
 ## Get started
 
 - install `yarn`
