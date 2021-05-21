@@ -1,6 +1,6 @@
 {
   "name": "@nexys/stripe",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "files": [
     "dist/*"
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Nexysweb/boilerplate-node-package"
+    "url": "https://github.com/nexys-system/stripe"
   },
   "keywords": [
     "stripe"
