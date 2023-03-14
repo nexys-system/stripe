@@ -1,26 +1,33 @@
-import * as T from './type';
+import qs from "qs";
+import { Method } from "./type";
 
-export const toUrlEncoded = (session: T.Session): string =>
-  Object.entries(session)
-    .map(([k, v]) => {
-      if (typeof v === 'string') {
-        return k + '=' + encodeURIComponent(v);
-      }
+const baseUrl = "https://api.stripe.com/v1";
 
-      if (Array.isArray(v)) {
-        return v
-          .map((x, i) => {
-            if (typeof x === 'string' || typeof x === 'number') {
-              return `${k}[${i}]=${encodeURIComponent(x)}`;
-            }
+const makeBody = (data?: { [k: string]: any }) => {
+  if (data === undefined || data === null) {
+    return undefined;
+  }
 
-            return Object.entries(x)
-              .map(([k2, v]) => `${k}[${i}][${k2}]=` + encodeURIComponent(String(v)))
-              .join('&');
-          })
-          .join('&');
-      }
+  return qs.stringify(data);
+};
 
-      return '';
-    })
-    .join('&');
+export const request =
+  (secretKey: string) =>
+  async (
+    path: string,
+    {
+      method = "GET",
+      data,
+    }: { method?: Method; data?: { [k: string]: any } } = {}
+  ) => {
+    const url = baseUrl + path;
+    const body = makeBody(data);
+
+    const Authorization = "Bearer " + secretKey;
+    const headers = {
+      "content-type": "application/x-www-form-urlencoded",
+      Authorization,
+    };
+    const r = await fetch(url, { method, headers, body });
+    return r.json();
+  };

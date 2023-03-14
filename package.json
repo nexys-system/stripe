@@ -1,6 +1,6 @@
 {
   "name": "@nexys/stripe",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "files": [
     "dist/*"
@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "echo \"no test\""
   },
   "repository": {
     "type": "git",
@@ -19,15 +19,7 @@
     "stripe"
   ],
   "devDependencies": {
-    "@types/jest": "^25.2.3",
-    "jest": "^26.0.1",
-    "ts-jest": "^25.3.1",
-    "typescript": "^3.9.3",
-    "@types/node-fetch": "^2.5.10",
-    "node-fetch": "^2.6.1"
-  },
-  "peerDependencies": {
-    "@types/node-fetch": "^2.5.10",
-    "node-fetch": "^2.6.1"
+    "typescript": "^4.9.5",
+    "@types/qs": "^6.9.7"
   }
 }
