@@ -84,7 +84,12 @@ class Client {
   };
 
   createProductsAndThenCheckout = async (
-    products: { label: string; rate: number; currency?: string }[],
+    products: {
+      label: string;
+      rate: number;
+      quantity?: number;
+      currency?: string;
+    }[],
     { success_url, cancel_url }: { success_url: string; cancel_url: string }
   ) => {
     const createProductsResponse = products.map(({ label, rate, currency }) =>
@@ -92,10 +97,13 @@ class Client {
     );
 
     const cp = await Promise.all(createProductsResponse);
-    const line_items: LineItem[] = cp.map((p) => ({
-      price: p.price.id,
-      quantity: 1,
-    }));
+    const line_items: LineItem[] = cp.map((p, i) => {
+      const quantity: number = (products[i] && products[i].quantity) || 1;
+      return {
+        price: p.price.id,
+        quantity,
+      };
+    });
 
     return this.checkoutSessionCreate({ success_url, cancel_url, line_items });
   };
