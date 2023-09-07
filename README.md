@@ -14,7 +14,3 @@ Client code: https://gist.github.com/johnb8005/3b1aec1546afad3185854b22b55586d4
 - install `yarn`
 - build `yarn build`
 - test `yarn test`
-
-### note
-
-Make sure you include `node-fetch` as required by peer dependencies.
