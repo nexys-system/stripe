@@ -48,6 +48,7 @@ class Client {
     success_url,
     currency = "CHF",
     line_items,
+    customer
     mode = "payment",
   }: CheckoutSession): Promise<{
     id: string;
@@ -62,6 +63,7 @@ class Client {
         currency,
         line_items,
         mode,
+        customer
       },
     });
 
@@ -106,6 +108,21 @@ class Client {
     });
 
     return this.checkoutSessionCreate({ success_url, cancel_url, line_items });
+  };
+
+  createCustomer = async ({ email, description, externalId }:{ email:string, description?:string, externalId:string }) => {
+    try {
+      return s.request("/customers", {
+        method: "POST",
+        data: {
+          email,
+          description,
+          "metadata[external_id]": externalId,
+        },
+      });
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 }
 
