@@ -12,6 +12,7 @@ export interface CheckoutSession {
   currency?: string;
   payment_method_types?: "card"[];
   line_items: LineItem[];
+  customer?: string;
   /**
    * If provided, this value will be used when the Customer object is created.
    * If not provided, customers will be asked to enter their email address.
