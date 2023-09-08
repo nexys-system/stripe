@@ -112,7 +112,7 @@ class Client {
 
   createCustomer = async ({ email, description, externalId }:{ email:string, description?:string, externalId:string }) => {
     try {
-      return s.request("/customers", {
+      return this.request("/customers", {
         method: "POST",
         data: {
           email,
