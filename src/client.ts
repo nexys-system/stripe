@@ -48,7 +48,7 @@ class Client {
     success_url,
     currency = "CHF",
     line_items,
-    customer
+    customer,
     mode = "payment",
   }: CheckoutSession): Promise<{
     id: string;
